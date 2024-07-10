@@ -15,21 +15,21 @@
 <template>
 
   <!--Logo e titolo-->
-  <header>
+
     <AppHeader />
-  </header>
+
   
-  <main>
+
     <!--filtro di ricerca-->
     <AppSearch />
     <!-- schermata contenente le carte -->
     <CardList />
-  </main>
+
 
 </template>
 
 <style lang="scss">
-  @use './style/general.scss'
+  @use './style/general.scss';
 
 
 
