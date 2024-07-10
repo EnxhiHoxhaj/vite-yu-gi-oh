@@ -20,9 +20,6 @@ export default {
 <style lang="scss" scoped>
     .row {
         width: 100vw;
-        position: absolute;
-        left: 0;
-        top: 0;
         padding: 1rem 0;
 
         .logo {
