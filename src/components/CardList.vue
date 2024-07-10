@@ -1,13 +1,19 @@
 <script>
-    export default {
-    name: 'CardList'
-}
+    import SingleCard from './SingleCard.vue';
+        export default {
+        name: 'CardList',
+        components : {
+            SingleCard
+        }
+    }
 </script>
 
 <template>
     <section class="container">
         <div class="row">
-            <div class="col-10 col-md-4 col-lg-2 mb-5"> ci sonooo</div>
+            <div class="col-10 col-md-4 col-lg-2 mb-5">
+                <SingleCard/>
+            </div>
             <!-- schermata contenente le carte -->
         </div>
     </section>
