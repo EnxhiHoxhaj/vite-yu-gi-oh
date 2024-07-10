@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
- sono l' AppHeader
+
 </template>
 
 <style lang="scss" scoped>

@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    sono la CardList
+
 </template>
 
 <style lang="scss" scoped>
