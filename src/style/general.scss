@@ -1,0 +1,9 @@
+// inclusione variable
+@use './partials/variables' as *;
+
+// inclusione bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+// inclusuione font
+// Supports weights 100-900
+@import '@fontsource-variable/montserrat';
