@@ -1,17 +1,24 @@
 <script>
     import SingleCard from './SingleCard.vue';
+      // importare lo store
+    import {store} from '../store';
         export default {
         name: 'CardList',
         components : {
             SingleCard
-        }
+        },
+        data () {
+            return {
+                store,
+            }
+        },
     }
 </script>
 
 <template>
     <section class="container">
         <div class="row">
-            <div class="col-6 col-md-4 col-lg-2 mb-5">
+            <div v-for="card in store.cardDeck" :key="card.id" class="col-6 col-md-4 col-lg-2 mb-5">
                 <SingleCard/>
             </div>
             <!-- schermata contenente le carte -->

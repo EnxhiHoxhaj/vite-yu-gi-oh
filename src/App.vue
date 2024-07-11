@@ -3,7 +3,6 @@
   import AppHeader from './components/AppHeader.vue'
   import CardList from './components/CardList.vue'
   // importare lo store
-
   import {store} from './store';
   export default {
     name: 'App',
@@ -21,8 +20,8 @@
         axios.
           get(store.apiURL)
           .then(risposta => {
-            console.log(risposta.data);
-            store.cardDeck = risposta.data;
+            console.log(risposta.data.data);
+            store.cardDeck = risposta.data.data;
           })
           .catch(err => {
             console.log(err);
