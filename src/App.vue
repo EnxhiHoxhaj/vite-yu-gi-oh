@@ -1,9 +1,10 @@
 <script >
-  import AppHeader from './components/AppHeader.vue';
-  import CardList from './components/CardList.vue';
+  import axios from 'axios';
+  import AppHeader from './components/AppHeader.vue'
+  import CardList from './components/CardList.vue'
   // importare lo store
 
-  import {store} from './store'
+  import {store} from './store';
   export default {
     name: 'App',
     components: {
@@ -14,6 +15,22 @@
       return {
         store,
       }
+    },
+    methods: {
+      getDeck(){
+        axios.
+          get(store.apiURL)
+          .then(risposta => {
+            console.log(risposta.data);
+            store.cardDeck = risposta.data;
+          })
+          .catch(err => {
+            console.log(err);
+          })
+      }
+    }, 
+    created() {
+      this.getDeck();
     }
   }
 </script>
