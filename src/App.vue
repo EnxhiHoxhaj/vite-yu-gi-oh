@@ -54,6 +54,7 @@
 
   main {
     background-color: $primary-colour;
+    padding-top: 5rem;
   }
 
 </style>

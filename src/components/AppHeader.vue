@@ -22,6 +22,7 @@ export default {
 
 <style lang="scss" scoped>
     .row {
+        width: 100vw;
         padding: 1rem 0;
         .logo {
             display: flex;
@@ -35,6 +36,7 @@ export default {
 
         h1 {
             color: black;
+            font-size: 2.4rem;
         }
 
     }

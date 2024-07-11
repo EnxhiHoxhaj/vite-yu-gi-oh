@@ -19,7 +19,7 @@ import { info } from 'sass';
 <template>
     <section class="container">
         <div class="row">
-            <div v-for="card in store.cardDeck" :key="card.id" class="col-5 col-md-4 col-lg-2 mb-5">
+            <div  v-for="card in store.cardDeck" :key="card.id" class="col-5 col-md-3 col-lg-2 mb-5 cont_card">
                 <SingleCard :info="card"/>
             </div>
             <!-- schermata contenente le carte -->
@@ -32,9 +32,15 @@ import { info } from 'sass';
     @use '../style/partials/variables.scss' as *;
 
   
-    div {
-    min-height: 600px;
-    border: solid black 0.01px;
+    .row {
+        background-color: white;
+        padding: 3rem 3rem 0.5rem;
+        gap: 1rem;
+        .cont_card {
+            background-color: $primary-colour;
+            width: calc(100% / 5 - 1rem);
+            padding: 0;
+        }
     }
 
 
