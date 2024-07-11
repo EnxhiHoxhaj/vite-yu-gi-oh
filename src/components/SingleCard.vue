@@ -10,8 +10,8 @@ export default {
 <template>
     <div class="character text-center">
         <img :src="info.card_images[0].image_url">
-        <h5>NOME DELLA CARTA</h5>
-        <h6>Specie</h6>
+        <h5>{{info.name}}</h5>
+        <h6>{{info.archetype}}</h6>
     </div>
 
 </template>

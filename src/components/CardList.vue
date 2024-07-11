@@ -19,7 +19,7 @@ import { info } from 'sass';
 <template>
     <section class="container">
         <div class="row">
-            <div v-for="card in store.cardDeck" :key="card.id" class="col-6 col-md-4 col-lg-2 mb-5">
+            <div v-for="card in store.cardDeck" :key="card.id" class="col-5 col-md-4 col-lg-2 mb-5">
                 <SingleCard :info="card"/>
             </div>
             <!-- schermata contenente le carte -->
