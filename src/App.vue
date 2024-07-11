@@ -1,11 +1,19 @@
 <script >
   import AppHeader from './components/AppHeader.vue';
   import CardList from './components/CardList.vue';
+  // importare lo store
+
+  import {store} from './store'
   export default {
     name: 'App',
     components: {
       AppHeader,
       CardList
+    },
+    data () {
+      return {
+        store,
+      }
     }
   }
 </script>

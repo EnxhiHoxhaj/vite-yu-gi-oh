@@ -11,7 +11,7 @@
 <template>
     <section class="container">
         <div class="row">
-            <div class="col-10 col-md-4 col-lg-2 mb-5">
+            <div class="col-6 col-md-4 col-lg-2 mb-5">
                 <SingleCard/>
             </div>
             <!-- schermata contenente le carte -->
