@@ -19,6 +19,13 @@ import { info } from 'sass';
 <template>
     <section class="container">
         <div class="row">
+            <div class="col-3 sel_archetype">
+                <select name="Select archetype" id="Select archetype" >
+                    <option :value="card.archetype" v-for="card in store.cardDeck" :key="card.id">{{card.archetype}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row deck">
             <div  v-for="card in store.cardDeck" :key="card.id" class="col-5 col-md-3 col-lg-2 mb-5 cont_card">
                 <SingleCard :info="card"/>
             </div>
@@ -31,8 +38,15 @@ import { info } from 'sass';
     @use '../style/general.scss' as *;
     @use '../style/partials/variables.scss' as *;
 
-  
     .row {
+        padding: 3rem 0;
+
+        .sel_archetype {
+            padding: 0;
+        }
+    }
+  
+    .deck {
         background-color: white;
         padding: 3rem 3rem 0.5rem;
         gap: 1rem;
