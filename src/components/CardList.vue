@@ -1,6 +1,6 @@
 <script>
     import SingleCard from './SingleCard.vue';
-    import AppSearch from './AppSearch.vue';
+
     // importare lo store
     import {store} from '../store';
     import { info } from 'sass';
@@ -8,7 +8,7 @@
         name: 'CardList',
         components : {
             SingleCard,
-            AppSearch
+
         },
         data () {
             return {
@@ -20,12 +20,9 @@
 
 <template>
     <section class="container">
-        <div class="row">
-            <AppSearch/>
-        </div>
         <div class="row deck">
             <div  v-for="card in store.cardDeck" :key="card.id" class="col-5 col-md-3 col-lg-2 mb-5 cont_card">
-                <SingleCard :info="card"/>
+             <SingleCard :info="card"/>
             </div>
             <!-- schermata contenente le carte -->
         </div>
