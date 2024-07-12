@@ -9,6 +9,14 @@ export default {
             store,
         }
     },
+    methods: {
+        resetSerach() {
+            //svuoto ricerca
+            store.cercaArchetype= '';
+            //ripartire ricerca
+            this.$emit('search');
+        }
+    }
 }
 
 </script>
@@ -19,6 +27,7 @@ export default {
             <select name="Select archetype" id="Select archetype" v-model="store.cercaArchetype">
                 <option :value="card.archetype" v-for="card in store.cardDeck" :key="card.id" @click.prevent="$emit('search')">{{card.archetype}}</option>
             </select>
+            <button @click.prevent="resetSerach">RESET</button>
         </div>
     </div></section>
 
@@ -28,7 +37,16 @@ export default {
 <style lang="scss" scoped>
 
     .sel_archetype {
-                padding: 0;
-            }
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            border-radius: 5px;
+            font-size: 1rem;
+            height: 26px;
+        }
+    }
 
 </style>
