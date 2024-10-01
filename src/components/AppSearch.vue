@@ -25,6 +25,7 @@ export default {
     <section class="container">     <div class="row">
         <div class="col-3 sel_archetype">
             <select name="Select archetype" id="Select archetype" v-model="store.cercaArchetype">
+                <option value="" disabled selected hidden>Choose an archetype</option>
                 <option :value="card.archetype" v-for="card in store.cardDeck" :key="card.id" @click.prevent="$emit('search')">{{card.archetype}}</option>
             </select>
             <button @click.prevent="resetSerach">RESET</button>
